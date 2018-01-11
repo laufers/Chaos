@@ -38,8 +38,8 @@ dat[5, 1] = 1.6
 dat[5, 2] = 1.6
 dat[5, 3] = .44
 
-x = np.zeros(N+1)
-y = np.zeros(N+1)
+x = np.zeros(N + 1)
+y = np.zeros(N + 1)
 
 for t in range(N):
     r = np.random.rand(1)
@@ -52,5 +52,5 @@ for t in range(N):
     x[t + 1] = dat[0, use] * x[t] + dat[1, use] * y[t] + dat[4, use]
     y[t + 1] = dat[2, use] * x[t] + dat[3, use] * y[t] + dat[5, use]
 
-plt.scatter(x,y,c = "r", edgecolor = "r", marker = ",", s = 1)
+plt.scatter(x,y,c = "r", edgecolor = "b", marker = ",", s = 1)
 plt.show()
