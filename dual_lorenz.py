@@ -54,9 +54,9 @@ plt.plot(z1, color = 'red')
 
 # 
 #  
-# fig = plt.figure()
-# from mpl_toolkits.mplot3d import Axes3D
-# ax = Axes3D(fig)
-# ax.plot(x,y,z)
+fig = plt.figure()
+from mpl_toolkits.mplot3d import Axes3D
+ax = Axes3D(fig)
+ax.plot(x,y,z)
 
 plt.show()
