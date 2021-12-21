@@ -28,15 +28,35 @@ for t in range(N):
         plotColor[t] = 'blue'
     
 
-plt.plot(x,y)
 plt.figure()
-plt.plot(x)
-plt.plot(y)
-plt.plot(z)
+plt.plot(x,y)
+plt.xlabel("Magnitude x")
+plt.ylabel("Magnitude y")
+
+plt.figure()
+plt.plot(x,z)
+plt.xlabel("Magnitude x")
+plt.ylabel("Magnitude z")
+
+plt.figure()
+plt.plot(y,z)
+plt.xlabel("Magnitude y")
+plt.ylabel("Magnitude z")
+
+plt.figure()
+plt.plot(x, label = 'x')
+plt.plot(y, label = 'y')
+plt.plot(z, label = 'z')
+plt.xlabel("Timestep")
+plt.ylabel("Magnitude")
+# plt.legend(loc = 'lower right')
+plt.legend(bbox_to_anchor=(1.06,1), loc = 'upper center', ncol = 1)
+# plt.show()
 
 fig = plt.figure()
 from mpl_toolkits.mplot3d import Axes3D
-ax = Axes3D(fig)
+ax = Axes3D(fig, auto_add_to_figure=False)
+fig.add_axes(ax)
 ax.plot(x,y,z,alpha = float(t)/(N-1),color='green')
 
 plt.show()
